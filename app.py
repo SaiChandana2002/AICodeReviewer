@@ -3,8 +3,8 @@ import streamlit as st
 
 genai.configure(api_key="AIzaSyDtScJ6s_5Z902L-soKHxyFtV_DRZMJH4A")
 st.title("An AI Code Reviewer")
-user_prompt=st.text_area("Enter yoyr code...")
-if sst.button("Generate") == True:
+user_prompt=st.text_area("Enter your code...")
+if st.button("Generate") == True:
   model=genai.GenerativeModel(model_name='models/gemini-1.5-pro-latest',
   system_instruction="""You are a friendly AI assistant.
   Given a python code to review, analyze the submitted code and identify bugs, errors or areas of improvement.
